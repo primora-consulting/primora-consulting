@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primora Consulting LLC</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configure Tailwind to use the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for animations and shadows */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-blue-600">Primora</a>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition duration-300">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button (hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 transition duration-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#about" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-20 md:py-32" id="home">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <!-- Hero Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Empowering Your Business with <span class="text-blue-600">AI & IT</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-lg mx-auto md:mx-0">
+                    Your strategic partner in navigating the future of technology. We optimize processes and accelerate growth.
+                </p>
+                <a href="#services" class="mt-8 inline-block px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    Explore Our Services
+                </a>
+            </div>
+            <!-- Hero Image/Graphic -->
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Placeholder SVG for a tech-related visual -->
+                <svg class="w-2/3 h-auto text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
+                    <path d="M12 11h-2v2h2v2h2v-2h2v-2h-2v-2h-2z" fill="white"/>
+                    <path d="M12 7h-2v2h2v-2zm0 8h2v-2h-2v2zm-2-6h2v-2h-2v2zm-2 2h2v-2h-2v2zm4 0h2v-2h-2v2zm-2-2h2v-2h-2v2z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-gray-100" id="about">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About Primora Consulting</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Primora Consulting LLC is dedicated to guiding businesses through the complexities of the modern technological landscape. Our mission is to empower you with the knowledge and tools to harness the power of AI and optimize your IT infrastructure, ensuring sustainable growth and competitive advantage.
+            </p>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Core Value Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-100 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for Innovation -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">Innovation</h3>
+                    <p class="mt-2 text-gray-500">
+                        We stay ahead of the curve, bringing you the latest advancements in AI and IT.
+                    </p>
+                </div>
+                <!-- Core Value Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-100 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for Education -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13.5m0-13.5a4.5 4.5 0 110 9m0-9a4.5 4.5 0 100 9m0 9v-2.253a4.5 4.5 0 000-9m0 9a4.5 4.5 0 010-9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">Education</h3>
+                    <p class="mt-2 text-gray-500">
+                        We believe in empowering our clients with the knowledge to manage and maintain their systems.
+                    </p>
+                </div>
+                <!-- Core Value Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-100 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for Partnership -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-7m5 0h2a2 2 0 002-2v-4a2 2 0 00-2-2H7a2 2 0 00-2 2v4a2 2 0 002 2h2m3-8l-3 4m0 0l-3 4m3-4v4m0-4h2.5a2 2 0 002-2V8a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2h2.5m3-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2h2.5m-3-4l3 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">Partnership</h3>
+                    <p class="mt-2 text-gray-500">
+                        We work side-by-side with you to build tailored solutions that meet your specific needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20" id="services">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                From strategic planning to hands-on implementation, we provide a full suite of services to transform your business.
+            </p>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: AI Strategy & Implementation -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover border border-gray-200">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-50 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for AI Strategy -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">AI Strategy & Implementation</h3>
+                    <p class="mt-2 text-gray-500">
+                        We help you identify opportunities to leverage AI, develop a clear roadmap, and implement solutions that drive efficiency and innovation.
+                    </p>
+                </div>
+                <!-- Service Card 2: Gen AI for Business Processes -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover border border-gray-200">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-50 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for Gen AI -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.674M12 3v18M10 5.488V19.512a2 2 0 002 2h.2a2 2 0 002-2V5.488M12 3a2 2 0 00-2 2v14a2 2 0 002 2h.2a2 2 0 002-2V5.488M12 3a2 2 0 01-2 2v14a2 2 0 012 2h.2a2 2 0 012-2V5.488"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a2 2 0 012 2v14a2 2 0 01-2 2h-.2a2 2 0 01-2-2V5.488"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a2 2 0 01-2 2v14a2 2 0 012 2h.2a2 2 0 012-2V5.488m-2-2.585a2 2 0 00-2 2V19.5a2 2 0 002 2h.2a2 2 0 002-2V5.415"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">Gen AI for Business Processes</h3>
+                    <p class="mt-2 text-gray-500">
+                        We help you leverage Generative AI to automate workflows, enhance decision-making, and create new business opportunities that drive efficiency and innovation.
+                    </p>
+                </div>
+                <!-- Service Card 3: AI & Tech Education -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition duration-300 card-hover border border-gray-200">
+                    <div class="flex justify-center items-center h-16 w-16 mx-auto bg-blue-50 rounded-full mb-4 text-blue-600">
+                        <!-- Inline SVG for Education -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v-4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v-4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4">AI & Tech Education</h3>
+                    <p class="mt-2 text-gray-500">
+                        We provide hands-on workshops and customized training to educate your team on the practical applications of popular Gen AI tools for daily tasks and strategic initiatives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section class="bg-blue-600 py-20 text-white" id="contact">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                Contact us today for a free consultation to see how Primora Consulting can help you achieve your goals.
+            </p>
+            <a href="mailto:primoraconsulting@gmail.com" class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Get in Touch
+            </a>
+            <!-- Optional: Add contact info below the button -->
+            <div class="mt-8 text-sm">
+                <p>Email: <a href="mailto:primoraconsulting@gmail.com" class="underline">primoraconsulting@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Primora Consulting LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
